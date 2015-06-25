@@ -12,11 +12,6 @@ TARGET = Calculator
 TEMPLATE = app
 
 
-SOURCES += main.cpp\
-        scientificcalc.cpp \
-    test4.cpp
 
-HEADERS  += scientificcalc.h \
-    test4.h
 
 FORMS    += scientificcalc.ui
