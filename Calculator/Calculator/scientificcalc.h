@@ -14,6 +14,7 @@ class ScientificCalc : public QMainWindow
 public:
     explicit ScientificCalc(QWidget *parent = 0);
     ~ScientificCalc();
+    void test();
 
 private:
     Ui::ScientificCalc *ui;
