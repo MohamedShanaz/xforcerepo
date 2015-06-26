@@ -12,3 +12,7 @@ ScientificCalc::~ScientificCalc()
 {
     delete ui;
 }
+
+void ScientificCalc::test(){
+
+}
