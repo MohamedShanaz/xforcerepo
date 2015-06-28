@@ -13,8 +13,32 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        scientificcalc.cpp
+        scientificcalc.cpp \
+    formulaelement.cpp \
+    functionelement.cpp \
+    plusfunctionelement.cpp \
+    minusfunctionelement.cpp \
+    multiplefunctionelement.cpp \
+    powerfunctionelement.cpp \
+    logfunctionelement.cpp \
+    sinefunctionelement.cpp \
+    cosinefunctionelement.cpp \
+    dividefunctionelement.cpp \
+    variableelement.cpp \
+    constantelement.cpp
 
-HEADERS  += scientificcalc.h
+HEADERS  += scientificcalc.h \
+    formulaelement.h \
+    functionelement.h \
+    plusfunctionelement.h \
+    minusfunctionelement.h \
+    multiplefunctionelement.h \
+    powerfunctionelement.h \
+    logfunctionelement.h \
+    sinefunctionelement.h \
+    cosinefunctionelement.h \
+    dividefunctionelement.h \
+    variableelement.h \
+    constantelement.h
 
 FORMS    += scientificcalc.ui
