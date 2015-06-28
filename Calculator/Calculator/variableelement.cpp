@@ -1,12 +1,33 @@
 #include "variableelement.h"
 
-VariableElement::VariableElement()
+namespace Formulator {
+
+VariableElement::VariableElement(string  pr_var_name)
 {
+   var_name=pr_var_name;
 
 }
 
-VariableElement::~VariableElement()
+
+
+void  VariableElement:: setVariableValue(double set_value)
 {
+    var_value=set_value;
+
+}
+
+
+double VariableElement:: getVariableValue()
+{
+return var_value;
+}
+
+string VariableElement::toString()
+{
+    return var_name;
+
+}
+
 
 }
 
