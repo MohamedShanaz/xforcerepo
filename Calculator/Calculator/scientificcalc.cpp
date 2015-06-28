@@ -1,5 +1,6 @@
 #include "scientificcalc.h"
 #include "ui_scientificcalc.h"
+#include "formulaelement.h"
 
 ScientificCalc::ScientificCalc(QWidget *parent) :
     QMainWindow(parent),
@@ -14,5 +15,17 @@ ScientificCalc::~ScientificCalc()
 }
 
 void ScientificCalc::test(){
+
+}
+
+void ScientificCalc::on_pushButton_7_clicked()
+{
+
+
+
+}
+
+void ScientificCalc::on_pushButton_10_clicked()
+{
 
 }

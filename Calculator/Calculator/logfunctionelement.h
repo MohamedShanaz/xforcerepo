@@ -1,6 +1,6 @@
 #ifndef LOGFUNCTIONELEMENT_H
 #define LOGFUNCTIONELEMENT_H
-
+#include "FunctionElement.h"
 
 class LogFunctionElement : public FunctionElement
 {

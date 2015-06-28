@@ -1,6 +1,6 @@
 #ifndef CONSTANTELEMENT_H
 #define CONSTANTELEMENT_H
-
+#include "FormulaElement.h"
 
 class ConstantElement : public FormulaElement
 {

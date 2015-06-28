@@ -1,6 +1,6 @@
 #ifndef PLUSFUNCTIONELEMENT_H
 #define PLUSFUNCTIONELEMENT_H
-
+#include "FunctionElement.h"
 
 class PlusFunctionElement : public FunctionElement
 {

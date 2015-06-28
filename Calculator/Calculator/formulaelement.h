@@ -7,6 +7,7 @@ class FormulaElement
 public:
     FormulaElement();
     ~FormulaElement();
+
 };
 
 #endif // FORMULAELEMENT_H
