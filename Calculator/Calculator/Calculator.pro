@@ -16,8 +16,6 @@ SOURCES += main.cpp\
         scientificcalc.cpp \
     formulaelement.cpp \
     functionelement.cpp \
-    plusfunctionelement.cpp \
-    minusfunctionelement.cpp \
     multiplefunctionelement.cpp \
     powerfunctionelement.cpp \
     logfunctionelement.cpp \
@@ -25,13 +23,13 @@ SOURCES += main.cpp\
     cosinefunctionelement.cpp \
     dividefunctionelement.cpp \
     variableelement.cpp \
-    constantelement.cpp
+    constantelement.cpp \
+    additionfunctionelement.cpp \
+    subtractionfunctionelement.cpp
 
 HEADERS  += scientificcalc.h \
     formulaelement.h \
     functionelement.h \
-    plusfunctionelement.h \
-    minusfunctionelement.h \
     multiplefunctionelement.h \
     powerfunctionelement.h \
     logfunctionelement.h \
@@ -39,6 +37,8 @@ HEADERS  += scientificcalc.h \
     cosinefunctionelement.h \
     dividefunctionelement.h \
     variableelement.h \
-    constantelement.h
+    constantelement.h \
+    subtractionfunctionelement.h \
+    additionfunctionelement.h
 
 FORMS    += scientificcalc.ui
