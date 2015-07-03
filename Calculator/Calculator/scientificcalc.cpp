@@ -2,6 +2,10 @@
 #include "ui_scientificcalc.h"
 #include "formulaelement.h"
 #include <string>
+#include <algorithm>
+#include <functional>
+#include <cctype>
+#include <locale>
 using std::string;
 QString value="", total="";
 int fn,Sc;
@@ -81,15 +85,57 @@ void ScientificCalc::on_btnNine_clicked()
 
 void ScientificCalc::on_btnBackspace_clicked()
 {
-    Displaytext =ui->textEdit->toPlainText();
-    int LastIndex=Displaytext.length();
-    value=ui->textEdit->toPlainText().remove(LastIndex-1);
-    ui->textEdit->setHtml(value);
+   string x;
+   string value2;
+   x = ui->textEdit->toPlainText().toStdString();  // Use toStdString() To convert QString to string
+    // To omit space at the end
+   x.erase(std::find_if(x.rbegin(), x.rend(), std::not1(std::ptr_fun<int, int>(std::isspace))).base(), x.end());
+   value2=x.substr(0, x.size()-1);  // remove last charecter
+   value = QString::fromUtf8(value2.c_str()); // to convert string to Qstring
+   ui->textEdit->setHtml(value);
 }
 
 void ScientificCalc::on_btnPlus_clicked()
 {
     //Plus button
-    value = value + "+";
+    value = value + " + ";
     ui->textEdit->setHtml(value);
+}
+
+void ScientificCalc::on_btnClear_clicked()
+{
+    value="";
+    ui->textEdit->setHtml(value);
+}
+
+void ScientificCalc::on_btnMultiple_clicked()
+{
+    value = value + " X ";
+    ui->textEdit->setHtml(value);
+}
+
+void ScientificCalc::on_btnDivide_clicked()
+{
+    value = value + " ÷ ";
+    ui->textEdit->setHtml(value);
+}
+
+void ScientificCalc::on_btnSquareroot_clicked()
+{
+    value ="√"+value;
+    ui->textEdit->setHtml(value);
+}
+
+void ScientificCalc::on_btnMinus_clicked()
+{
+    value = value + " - ";
+    ui->textEdit->setHtml(value);
+}
+
+void ScientificCalc::on_btnEqual_clicked()
+{
+   /* Displaytext=ui->textEdit->toPlainText().toStdString();
+    FormulaElement obj=FormulaElement();
+    value = obj.parseFormula(Displaytext);
+     ui->textEdit->setHtml(value);*/
 }

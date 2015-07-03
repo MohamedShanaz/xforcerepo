@@ -40,6 +40,18 @@ private slots:
 
     void on_btnPlus_clicked();
 
+    void on_btnClear_clicked();
+
+    void on_btnMultiple_clicked();
+
+    void on_btnDivide_clicked();
+
+    void on_btnSquareroot_clicked();
+
+    void on_btnMinus_clicked();
+
+    void on_btnEqual_clicked();
+
 private:
     Ui::ScientificCalc *ui;
 };
