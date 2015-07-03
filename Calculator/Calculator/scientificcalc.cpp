@@ -1,11 +1,11 @@
 #include "scientificcalc.h"
 #include "ui_scientificcalc.h"
 #include "formulaelement.h"
-
-
+#include <string>
+using std::string;
 QString value="", total="";
 int fn,Sc;
-
+QString Displaytext;
 
 ScientificCalc::ScientificCalc(QWidget *parent) :
     QMainWindow(parent),
@@ -23,67 +23,73 @@ void ScientificCalc::test(){
 
 }
 
-void ScientificCalc::on_pushButton_7_clicked()
-{
 
-    value = value + "7";
-
-    ui->textEdit->setHtml(value);
-  // ui->textEdit->setText(value);
-
-}
-
-void ScientificCalc::on_pushButton_10_clicked()
-{
-    value = value + "7";
-    ui->textEdit->setHtml(value);
-}
-
-void ScientificCalc::on_pushButton_18_clicked()
-{
-    value = value + "5";
-
-    ui->textEdit->setHtml(value);
-}
-
-void ScientificCalc::on_pushButton_20_clicked()
+void ScientificCalc::on_btnOne_clicked()
 {
     value = value + "1";
     ui->textEdit->setHtml(value);
 }
 
-void ScientificCalc::on_pushButton_23_clicked()
+void ScientificCalc::on_btnTwo_clicked()
 {
     value = value + "2";
     ui->textEdit->setHtml(value);
 }
 
-void ScientificCalc::on_pushButton_24_clicked()
+void ScientificCalc::on_btnThree_clicked()
 {
     value = value + "3";
     ui->textEdit->setHtml(value);
 }
 
-void ScientificCalc::on_pushButton_15_clicked()
+void ScientificCalc::on_btnFour_clicked()
 {
     value = value + "4";
     ui->textEdit->setHtml(value);
 }
 
-void ScientificCalc::on_pushButton_19_clicked()
+void ScientificCalc::on_btnFive_clicked()
+{
+    value = value + "5";
+    ui->textEdit->setHtml(value);
+}
+
+void ScientificCalc::on_btnSix_clicked()
 {
     value = value + "6";
     ui->textEdit->setHtml(value);
 }
 
-void ScientificCalc::on_pushButton_13_clicked()
+void ScientificCalc::on_btnSeven_clicked()
+{
+    value = value + "7";
+    ui->textEdit->setHtml(value);
+}
+
+void ScientificCalc::on_btnEight_clicked()
 {
     value = value + "8";
     ui->textEdit->setHtml(value);
 }
 
-void ScientificCalc::on_pushButton_14_clicked()
+void ScientificCalc::on_btnNine_clicked()
 {
     value = value + "9";
+    ui->textEdit->setHtml(value);
+}
+
+
+void ScientificCalc::on_btnBackspace_clicked()
+{
+    Displaytext =ui->textEdit->toPlainText();
+    int LastIndex=Displaytext.length();
+    value=ui->textEdit->toPlainText().remove(LastIndex-1);
+    ui->textEdit->setHtml(value);
+}
+
+void ScientificCalc::on_btnPlus_clicked()
+{
+    //Plus button
+    value = value + "+";
     ui->textEdit->setHtml(value);
 }

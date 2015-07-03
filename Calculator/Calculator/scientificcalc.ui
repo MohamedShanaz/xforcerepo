@@ -40,7 +40,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_3">
+   <widget class="QPushButton" name="btnBackspace">
     <property name="geometry">
      <rect>
       <x>230</x>
@@ -58,7 +58,7 @@ p, li { white-space: pre-wrap; }
      <string>⌫</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_6">
+   <widget class="QPushButton" name="btnPlusMinus">
     <property name="geometry">
      <rect>
       <x>280</x>
@@ -71,7 +71,7 @@ p, li { white-space: pre-wrap; }
      <string>+ -</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_7">
+   <widget class="QPushButton" name="btnCloseBracket">
     <property name="geometry">
      <rect>
       <x>80</x>
@@ -102,7 +102,7 @@ p, li { white-space: pre-wrap; }
      <string>Pi</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_9">
+   <widget class="QPushButton" name="btnOpenBracket">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -115,7 +115,7 @@ p, li { white-space: pre-wrap; }
      <string>(</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_10">
+   <widget class="QPushButton" name="btnSeven">
     <property name="geometry">
      <rect>
       <x>180</x>
@@ -128,7 +128,7 @@ p, li { white-space: pre-wrap; }
      <string>7</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_11">
+   <widget class="QPushButton" name="btnMultiple">
     <property name="geometry">
      <rect>
       <x>330</x>
@@ -141,7 +141,7 @@ p, li { white-space: pre-wrap; }
      <string>X</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_12">
+   <widget class="QPushButton" name="btnClear">
     <property name="geometry">
      <rect>
       <x>180</x>
@@ -154,7 +154,7 @@ p, li { white-space: pre-wrap; }
      <string>C</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_13">
+   <widget class="QPushButton" name="btnEight">
     <property name="geometry">
      <rect>
       <x>230</x>
@@ -167,7 +167,7 @@ p, li { white-space: pre-wrap; }
      <string>8</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_14">
+   <widget class="QPushButton" name="btnNine">
     <property name="geometry">
      <rect>
       <x>280</x>
@@ -180,7 +180,7 @@ p, li { white-space: pre-wrap; }
      <string>9</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_15">
+   <widget class="QPushButton" name="btnFour">
     <property name="geometry">
      <rect>
       <x>180</x>
@@ -193,7 +193,7 @@ p, li { white-space: pre-wrap; }
      <string>4</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_16">
+   <widget class="QPushButton" name="btnDivide">
     <property name="geometry">
      <rect>
       <x>330</x>
@@ -206,7 +206,7 @@ p, li { white-space: pre-wrap; }
      <string>÷</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_17">
+   <widget class="QPushButton" name="btnEqual">
     <property name="geometry">
      <rect>
       <x>330</x>
@@ -219,7 +219,7 @@ p, li { white-space: pre-wrap; }
      <string>=</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_18">
+   <widget class="QPushButton" name="btnFive">
     <property name="geometry">
      <rect>
       <x>230</x>
@@ -232,7 +232,7 @@ p, li { white-space: pre-wrap; }
      <string>5</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_19">
+   <widget class="QPushButton" name="btnSix">
     <property name="geometry">
      <rect>
       <x>280</x>
@@ -245,7 +245,7 @@ p, li { white-space: pre-wrap; }
      <string>6</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_20">
+   <widget class="QPushButton" name="btnOne">
     <property name="geometry">
      <rect>
       <x>180</x>
@@ -258,7 +258,7 @@ p, li { white-space: pre-wrap; }
      <string>1</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_21">
+   <widget class="QPushButton" name="btnMinus">
     <property name="geometry">
      <rect>
       <x>330</x>
@@ -271,7 +271,7 @@ p, li { white-space: pre-wrap; }
      <string>-</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_23">
+   <widget class="QPushButton" name="btnTwo">
     <property name="geometry">
      <rect>
       <x>230</x>
@@ -284,7 +284,7 @@ p, li { white-space: pre-wrap; }
      <string>2</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_24">
+   <widget class="QPushButton" name="btnThree">
     <property name="geometry">
      <rect>
       <x>280</x>
@@ -297,7 +297,7 @@ p, li { white-space: pre-wrap; }
      <string>3</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_25">
+   <widget class="QPushButton" name="btnZero">
     <property name="geometry">
      <rect>
       <x>180</x>
@@ -310,7 +310,7 @@ p, li { white-space: pre-wrap; }
      <string>0</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_26">
+   <widget class="QPushButton" name="btnPlus">
     <property name="geometry">
      <rect>
       <x>330</x>
@@ -323,7 +323,7 @@ p, li { white-space: pre-wrap; }
      <string>+</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_28">
+   <widget class="QPushButton" name="btnDot">
     <property name="geometry">
      <rect>
       <x>280</x>
@@ -336,7 +336,7 @@ p, li { white-space: pre-wrap; }
      <string>.</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_22">
+   <widget class="QPushButton" name="btnPercentage">
     <property name="geometry">
      <rect>
       <x>380</x>
@@ -393,7 +393,7 @@ p, li { white-space: pre-wrap; }
      <string>Rad</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_31">
+   <widget class="QPushButton" name="btnTangent">
     <property name="geometry">
      <rect>
       <x>130</x>
@@ -411,7 +411,7 @@ p, li { white-space: pre-wrap; }
      <string>tan</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_32">
+   <widget class="QPushButton" name="btnSine">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -424,7 +424,7 @@ p, li { white-space: pre-wrap; }
      <string>Sin</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_33">
+   <widget class="QPushButton" name="btnCosine">
     <property name="geometry">
      <rect>
       <x>80</x>
@@ -455,20 +455,7 @@ p, li { white-space: pre-wrap; }
      <string>10*</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_35">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>230</y>
-      <width>41</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>ln</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_36">
+   <widget class="QPushButton" name="btnLog">
     <property name="geometry">
      <rect>
       <x>80</x>
@@ -499,7 +486,7 @@ p, li { white-space: pre-wrap; }
      <string>xy</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_38">
+   <widget class="QPushButton" name="btnpower">
     <property name="geometry">
      <rect>
       <x>80</x>
@@ -525,7 +512,7 @@ p, li { white-space: pre-wrap; }
      <string>n!</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_40">
+   <widget class="QPushButton" name="btnSquareroot">
     <property name="geometry">
      <rect>
       <x>380</x>

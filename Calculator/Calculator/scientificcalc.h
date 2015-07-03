@@ -17,25 +17,28 @@ public:
     void test();
 
 private slots:
-    void on_pushButton_7_clicked();
 
-    void on_pushButton_10_clicked();
+    void on_btnSeven_clicked();
 
-    void on_pushButton_18_clicked();
+    void on_btnOne_clicked();
 
-    void on_pushButton_20_clicked();
+    void on_btnTwo_clicked();
 
-    void on_pushButton_23_clicked();
+    void on_btnThree_clicked();
 
-    void on_pushButton_24_clicked();
+    void on_btnFour_clicked();
 
-    void on_pushButton_15_clicked();
+    void on_btnFive_clicked();
 
-    void on_pushButton_19_clicked();
+    void on_btnSix_clicked();
 
-    void on_pushButton_13_clicked();
+    void on_btnEight_clicked();
 
-    void on_pushButton_14_clicked();
+    void on_btnNine_clicked();
+
+    void on_btnBackspace_clicked();
+
+    void on_btnPlus_clicked();
 
 private:
     Ui::ScientificCalc *ui;
