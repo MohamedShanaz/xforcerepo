@@ -14,16 +14,26 @@ using std::find;
 using std::string;
 using namespace std;
 
+struct token{
+      char c;
+      float f;
+      bool number;
+
+      token():number(false),c(0){};
+};
+
 
 class FormulaElement
 {
 public:
     FormulaElement();
     ~FormulaElement();
-    FormulaElement parseFormula(string);
+    vector<token> parseFormula(string);
     bool is_number(string);
     bool is_varaible(string);
 
 };
+
+
 
 #endif // FORMULAELEMENT_H

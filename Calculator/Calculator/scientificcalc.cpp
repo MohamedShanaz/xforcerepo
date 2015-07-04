@@ -12,6 +12,8 @@ QString value="", total="";
 int fn,Sc;
 QString Displaytext;
 
+
+
 ScientificCalc::ScientificCalc(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::ScientificCalc)
@@ -135,10 +137,10 @@ void ScientificCalc::on_btnMinus_clicked()
 
 void ScientificCalc::on_btnEqual_clicked()
 {
-   /* Displaytext=ui->textEdit->toPlainText().toStdString();
+    Displaytext=ui->textEdit->toPlainText().toStdString();
     FormulaElement obj=FormulaElement();
-    value = obj.parseFormula(Displaytext);
-     ui->textEdit->setHtml(value);*/
+    obj.parseFormula(Displaytext);
+   //  ui->textEdit->setHtml(value);
 }
 
 //Handling menu item clicks

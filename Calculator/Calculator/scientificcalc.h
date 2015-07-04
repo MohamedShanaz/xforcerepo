@@ -1,8 +1,13 @@
 #ifndef SCIENTIFICCALC_H
 #define SCIENTIFICCALC_H
-
 #include <QMainWindow>
+#include <string>
+#include <algorithm>
+#include <functional>
+#include <cctype>
+#include <locale>
 
+using std::string;
 namespace Ui {
 class ScientificCalc;
 }
@@ -12,6 +17,9 @@ class ScientificCalc : public QMainWindow
     Q_OBJECT
 
 public:
+    QString value="",total="";
+    int fn,Sc;
+    string Displaytext;
     explicit ScientificCalc(QWidget *parent = 0);
     ~ScientificCalc();
     void test();
