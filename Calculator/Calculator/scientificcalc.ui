@@ -617,7 +617,7 @@ p, li { white-space: pre-wrap; }
     <property name="title">
      <string>Help</string>
     </property>
-    <addaction name="actionView_Help"/>
+    <addaction name="menuItemViewHelp"/>
     <addaction name="actionAbout_Calculator"/>
    </widget>
    <addaction name="menuG"/>
@@ -649,7 +649,7 @@ p, li { white-space: pre-wrap; }
     <string>Create New Graph</string>
    </property>
   </action>
-  <action name="actionView_Help">
+  <action name="menuItemViewHelp">
    <property name="text">
     <string>View Help</string>
    </property>

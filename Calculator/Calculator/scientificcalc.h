@@ -52,6 +52,8 @@ private slots:
 
     void on_btnEqual_clicked();
 
+    void on_menuItemViewHelp_triggered();
+
 private:
     Ui::ScientificCalc *ui;
 };

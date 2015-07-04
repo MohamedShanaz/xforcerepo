@@ -4,12 +4,14 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    ScientificCalc w;
-    w.show();
+    ScientificCalc window;
+
+
+    window.setWindowTitle("FormCalc Scientific Calculator");
+    window.show();
+
 
     return a.exec();
 }
 
-void add(){
-    int y;
-}
+

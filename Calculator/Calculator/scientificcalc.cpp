@@ -1,6 +1,7 @@
 #include "scientificcalc.h"
 #include "ui_scientificcalc.h"
 #include "formulaelement.h"
+#include "viewhelp.h"
 #include <string>
 #include <algorithm>
 #include <functional>
@@ -138,4 +139,17 @@ void ScientificCalc::on_btnEqual_clicked()
     FormulaElement obj=FormulaElement();
     value = obj.parseFormula(Displaytext);
      ui->textEdit->setHtml(value);*/
+}
+
+//Handling menu item clicks
+
+
+
+
+
+void ScientificCalc::on_menuItemViewHelp_triggered()
+{
+   ViewHelp v;
+   v.show();
+
 }
