@@ -18,6 +18,7 @@
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
+#include <QtWidgets/QProgressBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTextEdit>
@@ -61,7 +62,6 @@ public:
     QPushButton *btnPercentage;
     QPushButton *pushButton_27;
     QPushButton *pushButton_29;
-    QPushButton *pushButton_30;
     QPushButton *btnTangent;
     QPushButton *btnSine;
     QPushButton *btnCosine;
@@ -75,6 +75,7 @@ public:
     QPushButton *pushButton_42;
     QPushButton *pushButton_43;
     QLabel *label;
+    QProgressBar *progressBar;
     QMenuBar *menuBar;
     QMenu *menuG;
     QMenu *menuGraph;
@@ -117,16 +118,16 @@ public:
         btnPlusMinus->setGeometry(QRect(280, 110, 41, 31));
         btnCloseBracket = new QPushButton(centralWidget);
         btnCloseBracket->setObjectName(QStringLiteral("btnCloseBracket"));
-        btnCloseBracket->setGeometry(QRect(80, 110, 41, 31));
+        btnCloseBracket->setGeometry(QRect(130, 150, 41, 31));
         pushButton_8 = new QPushButton(centralWidget);
         pushButton_8->setObjectName(QStringLiteral("pushButton_8"));
-        pushButton_8->setGeometry(QRect(130, 110, 41, 31));
+        pushButton_8->setGeometry(QRect(30, 150, 41, 31));
         QFont font1;
         font1.setPointSize(11);
         pushButton_8->setFont(font1);
         btnOpenBracket = new QPushButton(centralWidget);
         btnOpenBracket->setObjectName(QStringLiteral("btnOpenBracket"));
-        btnOpenBracket->setGeometry(QRect(30, 110, 41, 31));
+        btnOpenBracket->setGeometry(QRect(80, 150, 41, 31));
         btnSeven = new QPushButton(centralWidget);
         btnSeven->setObjectName(QStringLiteral("btnSeven"));
         btnSeven->setGeometry(QRect(180, 150, 41, 31));
@@ -183,14 +184,11 @@ public:
         btnPercentage->setGeometry(QRect(380, 110, 41, 31));
         pushButton_27 = new QPushButton(centralWidget);
         pushButton_27->setObjectName(QStringLiteral("pushButton_27"));
-        pushButton_27->setGeometry(QRect(130, 150, 41, 31));
+        pushButton_27->setGeometry(QRect(130, 110, 41, 31));
         pushButton_27->setFont(font1);
         pushButton_29 = new QPushButton(centralWidget);
         pushButton_29->setObjectName(QStringLiteral("pushButton_29"));
-        pushButton_29->setGeometry(QRect(30, 150, 41, 31));
-        pushButton_30 = new QPushButton(centralWidget);
-        pushButton_30->setObjectName(QStringLiteral("pushButton_30"));
-        pushButton_30->setGeometry(QRect(80, 150, 41, 31));
+        pushButton_29->setGeometry(QRect(130, 230, 41, 31));
         btnTangent = new QPushButton(centralWidget);
         btnTangent->setObjectName(QStringLiteral("btnTangent"));
         btnTangent->setGeometry(QRect(130, 190, 41, 31));
@@ -203,7 +201,7 @@ public:
         btnCosine->setGeometry(QRect(80, 190, 41, 31));
         pushButton_34 = new QPushButton(centralWidget);
         pushButton_34->setObjectName(QStringLiteral("pushButton_34"));
-        pushButton_34->setGeometry(QRect(130, 230, 41, 31));
+        pushButton_34->setGeometry(QRect(30, 230, 41, 31));
         pushButton_34->setFont(font1);
         btnLog = new QPushButton(centralWidget);
         btnLog->setObjectName(QStringLiteral("btnLog"));
@@ -239,6 +237,10 @@ public:
         font2.setBold(true);
         font2.setWeight(75);
         label->setFont(font2);
+        progressBar = new QProgressBar(centralWidget);
+        progressBar->setObjectName(QStringLiteral("progressBar"));
+        progressBar->setGeometry(QRect(30, 110, 91, 29));
+        progressBar->setValue(24);
         ScientificCalc->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(ScientificCalc);
         menuBar->setObjectName(QStringLiteral("menuBar"));
@@ -312,7 +314,6 @@ public:
         btnPercentage->setText(QApplication::translate("ScientificCalc", "%", 0));
         pushButton_27->setText(QApplication::translate("ScientificCalc", "Grad", 0));
         pushButton_29->setText(QApplication::translate("ScientificCalc", "Deg", 0));
-        pushButton_30->setText(QApplication::translate("ScientificCalc", "Rad", 0));
         btnTangent->setText(QApplication::translate("ScientificCalc", "tan", 0));
         btnSine->setText(QApplication::translate("ScientificCalc", "Sin", 0));
         btnCosine->setText(QApplication::translate("ScientificCalc", "cos", 0));
