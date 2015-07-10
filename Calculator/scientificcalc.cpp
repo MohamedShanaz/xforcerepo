@@ -171,3 +171,9 @@ void ScientificCalc::on_btnCloseBracket_clicked()
     value = value + " ) ";
     ui->textEdit->setHtml(value);
 }
+
+void ScientificCalc::on_btnDot_clicked()
+{
+    /*value = value + ".";
+    ui->textEdit->setHtml(value);*/
+}

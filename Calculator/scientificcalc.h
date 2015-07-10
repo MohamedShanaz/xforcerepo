@@ -67,6 +67,8 @@ private slots:
 
     void on_btnCloseBracket_clicked();
 
+    void on_btnDot_clicked();
+
 public:
     Ui::ScientificCalc *ui;
     ViewHelp *viewhelp;
