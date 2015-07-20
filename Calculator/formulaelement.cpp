@@ -74,7 +74,9 @@ vector<token>  FormulaElement::parseFormula(string input)
 
 
        FunctionElement objFunctionElement;
+       //objFunctionElement.retExtStatic(input);//
       answer= objFunctionElement.evaluate(output,input);
+
     SetAnswer(answer);
    return output;
 }

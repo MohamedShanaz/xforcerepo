@@ -27,7 +27,8 @@ SOURCES += main.cpp\
     additionfunctionelement.cpp \
     subtractionfunctionelement.cpp \
     viewhelp.cpp \
-    aboutcalculator.cpp
+    aboutcalculator.cpp \
+    graphformula.cpp
 
 HEADERS  += scientificcalc.h \
     formulaelement.h \
@@ -43,8 +44,10 @@ HEADERS  += scientificcalc.h \
     subtractionfunctionelement.h \
     additionfunctionelement.h \
     viewhelp.h \
-    aboutcalculator.h
+    aboutcalculator.h \
+    graphformula.h
 
 FORMS    += scientificcalc.ui \
     viewhelp.ui \
-    aboutcalculator.ui
+    aboutcalculator.ui \
+    graphformula.ui

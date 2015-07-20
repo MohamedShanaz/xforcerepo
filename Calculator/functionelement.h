@@ -2,14 +2,17 @@
 #define FUNCTIONELEMENT_H
 #include "FormulaElement.h"
 #include <vector>
-
+#include <sstream>
 
 class FunctionElement : public FormulaElement
 {
+
 public:
-    const char *expressionToParse;
+
+ const char *expressionToParse;
     FunctionElement();
     ~FunctionElement();
+
     double evaluate(vector<token>,string);
     char peek();
     char get();

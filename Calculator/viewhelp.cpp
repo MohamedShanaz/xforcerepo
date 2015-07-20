@@ -6,6 +6,9 @@ ViewHelp::ViewHelp(QWidget *parent) :
     ui(new Ui::ViewHelp)
 {
     ui->setupUi(this);
+    this->setWindowTitle("Help");
+     this->setFixedSize(403,380);
+    ui->textEdit->setDisabled(true);
 }
 
 ViewHelp::~ViewHelp()

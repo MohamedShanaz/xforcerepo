@@ -1,12 +1,15 @@
 #ifndef SCIENTIFICCALC_H
 #define SCIENTIFICCALC_H
+#include "viewhelp.h"
+#include "graphformula.h"
+#include "aboutcalculator.h"
 #include <QMainWindow>
 #include <string>
 #include <algorithm>
 #include <functional>
 #include <cctype>
 #include <locale>
-#include "viewhelp.h"
+
 
 using std::string;
 namespace Ui {
@@ -19,7 +22,6 @@ class ScientificCalc : public QMainWindow
 
 public:
     QString value="",total="";
-    int fn,Sc;
     string Displaytext;
     explicit ScientificCalc(QWidget *parent = 0);
     ~ScientificCalc();
@@ -63,15 +65,27 @@ private slots:
 
     void on_menuItemViewHelp_triggered();
 
+    void on_CreateNewGraph_triggered();
+
+    void on_actionAboutCalculator_triggered();
+
     void on_btnOpenBracket_clicked();
 
     void on_btnCloseBracket_clicked();
 
     void on_btnDot_clicked();
 
+    void on_Xforce_clicked();
+
+    void on_btnZero_clicked();
+
+
 public:
     Ui::ScientificCalc *ui;
     ViewHelp *viewhelp;
+    GraphFormula *graphformula;
+    AboutCalculator *aboutcalculator;
+
 
 };
 

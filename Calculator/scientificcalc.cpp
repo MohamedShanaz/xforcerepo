@@ -3,6 +3,7 @@
 #include "formulaelement.h"
 #include "viewhelp.h"
 #include "aboutcalculator.h"
+#include "graphformula.h"
 #include <string>
 #include <algorithm>
 #include <functional>
@@ -19,6 +20,8 @@ ScientificCalc::ScientificCalc(QWidget *parent) :
     ui(new Ui::ScientificCalc)
 {
     ui->setupUi(this);
+    ui->progressBar->setMinimum(0);
+    // ui->progressBar->setMaximum(0);
 }
 
 ScientificCalc::~ScientificCalc()
@@ -109,6 +112,7 @@ void ScientificCalc::on_btnClear_clicked()
 {
     value="";
     ui->textEdit->setHtml(value);
+    ui->progressBar->setValue(0);
 }
 
 void ScientificCalc::on_btnMultiple_clicked()
@@ -137,6 +141,7 @@ void ScientificCalc::on_btnMinus_clicked()
 
 void ScientificCalc::on_btnEqual_clicked()
 {
+    ui->progressBar->setValue(100);
     Displaytext=ui->textEdit->toPlainText().toStdString();
     FormulaElement obj=FormulaElement();
    obj.parseFormula(Displaytext);
@@ -152,13 +157,28 @@ void ScientificCalc::on_btnEqual_clicked()
 
 void ScientificCalc::on_menuItemViewHelp_triggered()
 {
-   /*ViewHelp v;
-   v.setModal(true);
-   v.exec();*/
+
    viewhelp=new ViewHelp(this);
    viewhelp->show();
 
 }
+
+void ScientificCalc::on_CreateNewGraph_triggered()
+{
+
+   graphformula =new GraphFormula(this);
+   graphformula->show();
+
+}
+
+void ScientificCalc::on_actionAboutCalculator_triggered()
+{
+
+   aboutcalculator =new AboutCalculator(this);
+   aboutcalculator->show();
+
+}
+
 
 void ScientificCalc::on_btnOpenBracket_clicked()
 {
@@ -174,6 +194,18 @@ void ScientificCalc::on_btnCloseBracket_clicked()
 
 void ScientificCalc::on_btnDot_clicked()
 {
-    /*value = value + ".";
-    ui->textEdit->setHtml(value);*/
+    value = value + ".";
+    ui->textEdit->setHtml(value);
+}
+
+void ScientificCalc::on_Xforce_clicked()
+{
+    value = "'Syntax Error'";
+    ui->textEdit->setHtml(value);
+}
+
+void ScientificCalc::on_btnZero_clicked()
+{
+    value = value + "0";
+    ui->textEdit->setHtml(value);
 }
