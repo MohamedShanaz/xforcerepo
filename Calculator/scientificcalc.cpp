@@ -200,7 +200,7 @@ void ScientificCalc::on_btnDot_clicked()
 
 void ScientificCalc::on_Xforce_clicked()
 {
-    value = "'Syntax Error'";
+    value = "'X-Force Group'";
     ui->textEdit->setHtml(value);
 }
 
