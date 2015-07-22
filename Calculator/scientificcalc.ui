@@ -395,7 +395,7 @@ p, li { white-space: pre-wrap; }
      <string>log</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_37">
+   <widget class="QPushButton" name="btnToAnyPower">
     <property name="geometry">
      <rect>
       <x>80</x>
@@ -413,7 +413,7 @@ p, li { white-space: pre-wrap; }
      <string>x^y</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="btnpower">
+   <widget class="QPushButton" name="btnToPower2">
     <property name="geometry">
      <rect>
       <x>80</x>

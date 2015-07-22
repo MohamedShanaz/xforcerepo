@@ -5,6 +5,7 @@
 #include "formulaelement.h"
 #include "multiplefunctionelement.h"
 #include "dividefunctionelement.h"
+#include "powerfunctionelement.h"
 #include <string>
 #include <QMessageBox>
 #include <string>
@@ -29,16 +30,16 @@ FunctionElement::~FunctionElement()
 
 double FunctionElement::evaluate(vector<token> tokens,string input){
 
- double answer;
-int pluscount=0,minuscount=0,multiplecount=0;
+ double answer,answer2;
+int pluscount=0,minuscount=0,multiplecount=0,powercount=0;
 char sign;
-
+ vector<string> signvector;
 
  for(unsigned int i=0;i<tokens.size();i++)
  {
      std::ostringstream ssi;
      ssi <<tokens[i].c;
-     std::string si(ssi.str());
+     std::string si(ssi.str());   // used to add the signs to vector
      if(tokens[i].c == '+'){
          ++pluscount;
          sign=tokens[i].c;
@@ -51,16 +52,28 @@ char sign;
          ++multiplecount;
          sign=tokens[i].c;
      }
+     if(tokens[i].c == '^'){
+         ++powercount;
+         sign=tokens[i].c;
+     }
+     if (si =="+" | si=="-" | si=="^" | si=="/" | si=="(" | si==")")
+         signvector.push_back(si);
+
 
  }
-
-if(pluscount>=1 && minuscount==0 && multiplecount==0){
+if(powercount>=1 && pluscount==0 && minuscount==0 && multiplecount==0){
+    if(sign == '^'){
+    PowerFunctionElement obj2;
+    answer =obj2.evaluate(tokens);
+    }
+}
+else if(pluscount>=1 && minuscount==0 && multiplecount==0 && powercount==0){
     if(sign == '+'){
     AdditionFunctionElement obj2;
     answer =obj2.evaluate(tokens);
     }
 }
-else if(pluscount==0 && minuscount>=1 && multiplecount==0){
+else if(pluscount==0 && minuscount>=1 && multiplecount==0 && powercount==0){
    /* if(sign == '-'){
     SubtractionFunctionElement subtract;
     answer =subtract.evaluate(tokens);
@@ -69,7 +82,7 @@ else if(pluscount==0 && minuscount>=1 && multiplecount==0){
         answer=expression();
 }
 
-else if(pluscount==0 && minuscount==0 && multiplecount>=1){
+else if(pluscount==0 && minuscount==0 && multiplecount>=1 && powercount==0){
     if(sign == 'X'){
     MultipleFunctionElement objMultipleElement;
     answer =objMultipleElement.evaluate(tokens);
@@ -77,11 +90,20 @@ else if(pluscount==0 && minuscount==0 && multiplecount>=1){
 }
 else{
 
- expressionToParse= input.c_str();
+    for(unsigned int i=0;i<signvector.size();i++)
+    {
+        if(signvector[i]=="^"){
+    PowerFunctionElement obj2;
+    answer2 =obj2.evaluate(tokens);  // answer from power function
+        }
+
+    }
+    expressionToParse= input.c_str();
     answer=expression();
+    answer=answer+answer2;
 }
 
-    return answer;
+    return answer ;
 
 
 }    // Ende for evaluate;
@@ -129,6 +151,8 @@ else{
          get();
          return -expression();
      }
+
+
      return 0; // error
  }
 
@@ -136,18 +160,22 @@ else{
  int FunctionElement::term()
  {
      double result = factor();
-     while (peek() == '*' || peek() == '/')
+     while (peek() == '*' || peek() == '/' || peek() == '^')
          if (get() == '*')
              result *= factor();
-         else
+         else if (peek() == '/')
              result /= factor();
+        else if(peek() == '^')
+             result=0;  // added to ^
+      else
+             result /= factor()+1;  // added plus becz it adds to total
      return result;
  }
  int FunctionElement::expression()
  {
 
      double result = term();
-     while (peek() == '+' || peek() == '-')
+     while (peek() == '+' || peek() == '-' || peek()=='^' )
          if (get() == '+')
              result += term();
          else

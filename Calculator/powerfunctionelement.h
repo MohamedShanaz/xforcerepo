@@ -7,6 +7,7 @@ class PowerFunctionElement : public FunctionElement
 public:
     PowerFunctionElement();
     ~PowerFunctionElement();
+     double evaluate(vector<token>);
 };
 
 #endif // POWERFUNCTIONELEMENT_H

@@ -117,7 +117,7 @@ void ScientificCalc::on_btnClear_clicked()
 
 void ScientificCalc::on_btnMultiple_clicked()
 {
-    value = value + " X ";
+    value = value + " * ";
     ui->textEdit->setHtml(value);
 }
 
@@ -208,4 +208,30 @@ void ScientificCalc::on_btnZero_clicked()
 {
     value = value + "0";
     ui->textEdit->setHtml(value);
+}
+
+
+
+void ScientificCalc::on_btnToAnyPower_clicked()
+{
+    string str;
+    QString value2;
+    str = ui->textEdit->toPlainText().toStdString();
+    int i=str.length();
+    string base=str.substr(0,str.size());
+    value2 = QString::fromUtf8(base.c_str());
+    value= value2 +"^";
+ui->textEdit->setHtml(value);
+}
+
+void ScientificCalc::on_btnToPower2_clicked()
+{
+    string str;
+    QString value2;
+    str = ui->textEdit->toPlainText().toStdString();
+    int i=str.length();
+    string base=str.substr(0,str.size());
+    value2 = QString::fromUtf8(base.c_str());
+    value= value2 +"^2";
+ui->textEdit->setHtml(value);
 }

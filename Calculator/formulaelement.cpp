@@ -27,6 +27,9 @@ vector<token>  FormulaElement::parseFormula(string input)
 {
     input.erase(remove_if(input.begin(), input.end(), isspace),input.end());  // Remove space in a string
   //  input ="23+69";
+
+
+   // if(input)
    stringstream parser(input);
    vector<token> output;
    vector<string> vector2;

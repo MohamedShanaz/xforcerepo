@@ -79,6 +79,9 @@ private slots:
 
     void on_btnZero_clicked();
 
+    void on_btnToAnyPower_clicked();
+
+    void on_btnToPower2_clicked();
 
 public:
     Ui::ScientificCalc *ui;
