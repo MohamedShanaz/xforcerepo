@@ -65,7 +65,7 @@ public:
     QPushButton *btnLog;
     QPushButton *btnToAnyPower;
     QPushButton *btnToPower2;
-    QPushButton *pushButton_39;
+    QPushButton *btnFactorial;
     QPushButton *btnSquareroot;
     QLabel *label;
     QProgressBar *progressBar;
@@ -196,9 +196,9 @@ public:
         btnToPower2 = new QPushButton(centralWidget);
         btnToPower2->setObjectName(QStringLiteral("btnToPower2"));
         btnToPower2->setGeometry(QRect(80, 190, 41, 31));
-        pushButton_39 = new QPushButton(centralWidget);
-        pushButton_39->setObjectName(QStringLiteral("pushButton_39"));
-        pushButton_39->setGeometry(QRect(80, 270, 41, 31));
+        btnFactorial = new QPushButton(centralWidget);
+        btnFactorial->setObjectName(QStringLiteral("btnFactorial"));
+        btnFactorial->setGeometry(QRect(80, 270, 41, 31));
         btnSquareroot = new QPushButton(centralWidget);
         btnSquareroot->setObjectName(QStringLiteral("btnSquareroot"));
         btnSquareroot->setGeometry(QRect(330, 150, 41, 31));
@@ -300,7 +300,7 @@ public:
         btnLog->setText(QApplication::translate("ScientificCalc", "log", 0));
         btnToAnyPower->setText(QApplication::translate("ScientificCalc", "x^y", 0));
         btnToPower2->setText(QApplication::translate("ScientificCalc", "x\302\262", 0));
-        pushButton_39->setText(QApplication::translate("ScientificCalc", "n!", 0));
+        btnFactorial->setText(QApplication::translate("ScientificCalc", "n!", 0));
         btnSquareroot->setText(QApplication::translate("ScientificCalc", "\342\210\232", 0));
         label->setText(QApplication::translate("ScientificCalc", "Scientific Calculator Master", 0));
         Xforce->setText(QApplication::translate("ScientificCalc", "XForce", 0));
