@@ -120,7 +120,8 @@ void ScientificCalc::on_btnPlus_clicked()
 
 void ScientificCalc::on_btnClear_clicked()
 {
-    value="";
+    value="";svalue="";Displaytext="";total="";
+    sqr=0,anSqrValue=0.0;
     ui->textEdit->setHtml(value);
     ui->progressBar->setValue(0);
 }
@@ -256,3 +257,4 @@ void ScientificCalc::on_btnLog_clicked()
     value="Log";
      ui->textEdit->setHtml(value);
 }
+

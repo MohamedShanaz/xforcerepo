@@ -109,7 +109,7 @@ else{
 
 istringstream iss( input );
 string  word;
-int cntr = 0,x;
+int cntr = 0;
 while (getline( iss, word, '(' ))
   {
   cout << "word " << ++cntr << ": " << trim( word ) << '\n';
