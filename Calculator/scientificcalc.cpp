@@ -218,7 +218,7 @@ void ScientificCalc::on_btnToAnyPower_clicked()
     QString value2;
     str = ui->textEdit->toPlainText().toStdString();
     int i=str.length();
-    string base=str.substr(0,str.size());
+    string base=str.substr(0,str.size());  // To get the last enetered character
     value2 = QString::fromUtf8(base.c_str());
     value= value2 +"^";
 ui->textEdit->setHtml(value);
