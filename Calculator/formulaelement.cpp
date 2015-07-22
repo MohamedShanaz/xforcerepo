@@ -85,12 +85,8 @@ vector<token>  FormulaElement::parseFormula(string input)
 }
 
 void FormulaElement::SetAnswer(double ans){
-   ScientificCalc obj=ScientificCalc();
-//ScientificCalc::Displaytext="dsds";
    double valueAsDouble = ans;
    valueAsString = QString::number(valueAsDouble);
-  // obj.value=valueAsString;
-
 }
 
 

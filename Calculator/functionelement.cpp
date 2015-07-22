@@ -13,6 +13,8 @@
 #include <functional>
 #include <cctype>
 #include <locale>
+#include<conio.h>
+#include<math.h>
 
 
 
@@ -56,6 +58,7 @@ char sign;
          ++powercount;
          sign=tokens[i].c;
      }
+
      if (si =="+" | si=="-" | si=="^" | si=="/" | si=="(" | si==")")
          signvector.push_back(si);
 
