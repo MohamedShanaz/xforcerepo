@@ -85,6 +85,8 @@ private slots:
 
     void on_btnToPower2_clicked();
 
+    void on_btnLog_clicked();
+
 public:
     Ui::ScientificCalc *ui;
     ViewHelp *viewhelp;

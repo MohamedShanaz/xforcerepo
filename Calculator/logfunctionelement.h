@@ -7,6 +7,7 @@ class LogFunctionElement : public FunctionElement
 public:
     LogFunctionElement();
     ~LogFunctionElement();
+     double evaluate(string);
 };
 
 #endif // LOGFUNCTIONELEMENT_H

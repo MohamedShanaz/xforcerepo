@@ -38,6 +38,7 @@ public:
     bool is_number(string);
     bool is_varaible(string);
     void SetAnswer(double);
+    string trim(const string&);
 
 };
 

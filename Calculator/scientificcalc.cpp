@@ -172,10 +172,6 @@ void ScientificCalc::on_btnEqual_clicked()
 
 //Handling menu item clicks
 
-
-
-
-
 void ScientificCalc::on_menuItemViewHelp_triggered()
 {
 
@@ -253,4 +249,10 @@ void ScientificCalc::on_btnToPower2_clicked()
     value2 = QString::fromUtf8(base.c_str());
     value= value2 +"^2";
 ui->textEdit->setHtml(value);
+}
+
+void ScientificCalc::on_btnLog_clicked()
+{
+    value="Log";
+     ui->textEdit->setHtml(value);
 }

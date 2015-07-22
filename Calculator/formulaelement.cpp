@@ -3,6 +3,7 @@
 #include "additionfunctionelement.h"
 #include "scientificcalc.h"
 #include "ui_scientificcalc.h"
+#include "logfunctionelement.h"
 #include <QMessageBox>
 #include <string>
 #include <algorithm>
@@ -21,27 +22,33 @@ FormulaElement::~FormulaElement()
 
 }
 
+string FormulaElement::trim( const string& s )
+  {
+  string result( s );
+  result.erase( result.find_last_not_of( " " ) + 1 );
+  result.erase( 0, result.find_first_not_of( " " ) );
+  return result;
+  }
 
 
 vector<token>  FormulaElement::parseFormula(string input)
 {
     input.erase(remove_if(input.begin(), input.end(), isspace),input.end());  // Remove space in a string
-  //  input ="23+69";
 
-
-   // if(input)
    stringstream parser(input);
    vector<token> output;
    vector<string> vector2;
-    QMessageBox messageBox;
+
    double answer=0.0; // just testing purpose
    while(parser)
    {
        token t;
-            if(isalnum(parser.peek()))
+            if(isalnum(parser.peek())){
                parser >> t.f;
-            else
+            }else{
                parser >> t.c;
+            }
+
             t.number = (t.c==0);
             output.push_back(t);
    }
@@ -51,7 +58,6 @@ vector<token>  FormulaElement::parseFormula(string input)
 
    for(unsigned int i=0;i<output.size();i++)
    {
-
       if(output[i].number){
           std::ostringstream ss;
           ss << output[i].f;
@@ -59,7 +65,6 @@ vector<token>  FormulaElement::parseFormula(string input)
           vector2.push_back(s);
       }
       else{
-          // sign
           std::ostringstream ssi;
           ssi <<output[i].c;
           std::string si(ssi.str());
@@ -69,15 +74,26 @@ vector<token>  FormulaElement::parseFormula(string input)
 
       }  // End for else
 
-
-
-
    } // end for the for loop
 
+   //Second
+   //input += " ";
+     istringstream iss( input );
+     string  word;
+     int cntr = 0,x;
+     while (getline( iss, word, '(' ))
+       {
+         FunctionElement obj;
+       cout << "word " << ++cntr << ": " << obj.trim( word ) << '\n';
+       if(cntr==1){
+           if(obj.trim(word)=="Log"){
+               obj.evaluate(output,input);
+           }
+       }
+      }  // End for While
 
 
        FunctionElement objFunctionElement;
-       //objFunctionElement.retExtStatic(input);//
       answer= objFunctionElement.evaluate(output,input);
 
     SetAnswer(answer);

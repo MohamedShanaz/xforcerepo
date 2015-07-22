@@ -6,6 +6,7 @@
 #include "multiplefunctionelement.h"
 #include "dividefunctionelement.h"
 #include "powerfunctionelement.h"
+#include "logfunctionelement.h"
 #include <string>
 #include <QMessageBox>
 #include <string>
@@ -106,15 +107,24 @@ else{
     answer=answer+answer2;
 }
 
+istringstream iss( input );
+string  word;
+int cntr = 0,x;
+while (getline( iss, word, '(' ))
+  {
+  cout << "word " << ++cntr << ": " << trim( word ) << '\n';
+  if(cntr==1){
+      if(trim(word)=="Log"){
+          LogFunctionElement obj;
+          answer=obj.evaluate(input);
+      }
+  }
+ }  // End for While
+
     return answer ;
 
 
-}    // Ende for evaluate;
-
-
-
-
-
+}    // End for evaluate;
 
  char FunctionElement::peek()
  {
