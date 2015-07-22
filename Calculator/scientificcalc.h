@@ -89,6 +89,8 @@ private slots:
 
 
 
+    void on_btnFactorial_clicked();
+
 public:
     Ui::ScientificCalc *ui;
     ViewHelp *viewhelp;

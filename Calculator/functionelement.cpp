@@ -34,7 +34,7 @@ FunctionElement::~FunctionElement()
 double FunctionElement::evaluate(vector<token> tokens,string input){
 
  double answer,answer2;
-int pluscount=0,minuscount=0,multiplecount=0,powercount=0;
+int pluscount=0,minuscount=0,multiplecount=0,powercount=0,factorialcount=0,Fvalue;
 char sign;
  vector<string> signvector;
 
@@ -59,13 +59,30 @@ char sign;
          ++powercount;
          sign=tokens[i].c;
      }
+     if(tokens[i].c == '!'){
+         ++factorialcount;
+         sign=tokens[i].c;
+         Fvalue=tokens[i-1].f;
+     }
 
-     if (si =="+" | si=="-" | si=="^" | si=="/" | si=="(" | si==")")
+     if (si =="+" | si=="-" | si=="^" | si=="/" | si=="(" | si==")"| si=="!")
          signvector.push_back(si);
 
 
  }
-if(powercount>=1 && pluscount==0 && minuscount==0 && multiplecount==0){
+if(factorialcount>=1 && powercount==0 && pluscount==0 && minuscount==0 && multiplecount==0){
+
+    int fact=1;
+    if(sign == '!'){
+        for(int a=1;a<=Fvalue;a++)
+       {
+           fact=fact*a;
+
+        }
+        answer=fact;
+    }
+}
+else if(powercount>=1 && pluscount==0 && minuscount==0 && multiplecount==0){
     if(sign == '^'){
     PowerFunctionElement obj2;
     answer =obj2.evaluate(tokens);

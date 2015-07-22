@@ -258,3 +258,9 @@ void ScientificCalc::on_btnLog_clicked()
      ui->textEdit->setHtml(value);
 }
 
+
+void ScientificCalc::on_btnFactorial_clicked()
+{
+    value=value +" !";
+    ui->textEdit->setHtml(value);
+}

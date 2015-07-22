@@ -69,15 +69,14 @@ vector<token>  FormulaElement::parseFormula(string input)
           ssi <<output[i].c;
           std::string si(ssi.str());
 
-     if (si =="+" | si=="-" | si=="^" | si=="/" | si=="(" | si==")")
+     if (si =="+" | si=="-" | si=="^" | si=="/" | si=="(" | si==")" | si=="!")
          vector2.push_back(si);
 
       }  // End for else
 
    } // end for the for loop
 
-   //Second
-   //input += " ";
+   //Second tokenize
      istringstream iss( input );
      string  word;
      int cntr = 0,x;
