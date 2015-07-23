@@ -267,8 +267,22 @@ void ScientificCalc::on_btnFactorial_clicked()
     ui->textEdit->setHtml(value);
 }
 
+
+void ScientificCalc::on_btnSine_clicked()
+{
+    value=value +"Sin";
+    ui->textEdit->setHtml(value);
+}
+
+
 void ScientificCalc::on_btnPlusMinus_clicked()
 {
     value="-" + value;
+    ui->textEdit->setHtml(value);
+}
+
+void ScientificCalc::on_btnCosine_clicked()
+{
+    value=value +"Cos";
     ui->textEdit->setHtml(value);
 }
