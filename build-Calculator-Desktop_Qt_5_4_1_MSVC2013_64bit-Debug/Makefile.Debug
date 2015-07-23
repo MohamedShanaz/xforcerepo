@@ -226,8 +226,9 @@ compiler_rcc_clean:
 compiler_moc_header_make_all: debug\moc_scientificcalc.cpp debug\moc_viewhelp.cpp debug\moc_aboutcalculator.cpp debug\moc_graphformula.cpp
 compiler_moc_header_clean:
 	-$(DEL_FILE) debug\moc_scientificcalc.cpp debug\moc_viewhelp.cpp debug\moc_aboutcalculator.cpp debug\moc_graphformula.cpp
-debug\moc_scientificcalc.cpp: C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QMainWindow \
-		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qmainwindow.h \
+debug\moc_scientificcalc.cpp: ..\Calculator\viewhelp.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QDialog \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qdialog.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qwidget.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qwindowdefs.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qglobal.h \
@@ -329,11 +330,12 @@ debug\moc_scientificcalc.cpp: C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QM
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qfiledevice.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qvector2d.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qtouchdevice.h \
+		..\Calculator\graphformula.h \
+		..\Calculator\aboutcalculator.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QMainWindow \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qmainwindow.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qtabwidget.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qicon.h \
-		..\Calculator\viewhelp.h \
-		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QDialog \
-		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qdialog.h \
 		..\Calculator\scientificcalc.h
 	C:\Qt\Qt5.4.1\5.4\msvc2013_64\bin\moc.exe $(DEFINES) -D_MSC_VER=1800 -D_WIN32 -D_WIN64 -IC:/Qt/Qt5.4.1/5.4/msvc2013_64/mkspecs/win32-msvc2013 -IG:/FormCalc/trunk/Calculator -IC:/Qt/Qt5.4.1/5.4/msvc2013_64/include -IC:/Qt/Qt5.4.1/5.4/msvc2013_64/include/QtWidgets -IC:/Qt/Qt5.4.1/5.4/msvc2013_64/include/QtGui -IC:/Qt/Qt5.4.1/5.4/msvc2013_64/include/QtANGLE -IC:/Qt/Qt5.4.1/5.4/msvc2013_64/include/QtCore -I. ..\Calculator\scientificcalc.h -o debug\moc_scientificcalc.cpp
 
@@ -687,8 +689,9 @@ compiler_clean: compiler_moc_header_clean compiler_uic_clean
 ####### Compile
 
 debug\main.obj: ..\Calculator\main.cpp ..\Calculator\scientificcalc.h \
-		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QMainWindow \
-		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qmainwindow.h \
+		..\Calculator\viewhelp.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QDialog \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qdialog.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qwidget.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qwindowdefs.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qglobal.h \
@@ -790,11 +793,12 @@ debug\main.obj: ..\Calculator\main.cpp ..\Calculator\scientificcalc.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qfiledevice.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qvector2d.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qtouchdevice.h \
+		..\Calculator\graphformula.h \
+		..\Calculator\aboutcalculator.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QMainWindow \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qmainwindow.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qtabwidget.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qicon.h \
-		..\Calculator\viewhelp.h \
-		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QDialog \
-		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qdialog.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QApplication \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qapplication.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qcoreapplication.h \
@@ -804,8 +808,9 @@ debug\main.obj: ..\Calculator\main.cpp ..\Calculator\scientificcalc.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qinputmethod.h
 
 debug\scientificcalc.obj: ..\Calculator\scientificcalc.cpp ..\Calculator\scientificcalc.h \
-		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QMainWindow \
-		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qmainwindow.h \
+		..\Calculator\viewhelp.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QDialog \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qdialog.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qwidget.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qwindowdefs.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qglobal.h \
@@ -907,11 +912,12 @@ debug\scientificcalc.obj: ..\Calculator\scientificcalc.cpp ..\Calculator\scienti
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qfiledevice.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qvector2d.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qtouchdevice.h \
+		..\Calculator\graphformula.h \
+		..\Calculator\aboutcalculator.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QMainWindow \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qmainwindow.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qtabwidget.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qicon.h \
-		..\Calculator\viewhelp.h \
-		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QDialog \
-		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qdialog.h \
 		ui_scientificcalc.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\QVariant \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QAction \
@@ -967,8 +973,8 @@ debug\scientificcalc.obj: ..\Calculator\scientificcalc.cpp ..\Calculator\scienti
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qtoolbar.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QWidget \
 		..\Calculator\formulaelement.h \
-		..\Calculator\aboutcalculator.h \
-		..\Calculator\graphformula.h
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QMessageBox \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qmessagebox.h
 
 debug\formulaelement.obj: ..\Calculator\formulaelement.cpp ..\Calculator\formulaelement.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QMainWindow \
@@ -1083,6 +1089,8 @@ debug\formulaelement.obj: ..\Calculator\formulaelement.cpp ..\Calculator\formula
 		..\Calculator\viewhelp.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QDialog \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qdialog.h \
+		..\Calculator\graphformula.h \
+		..\Calculator\aboutcalculator.h \
 		ui_scientificcalc.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\QVariant \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QAction \
@@ -1137,6 +1145,7 @@ debug\formulaelement.obj: ..\Calculator\formulaelement.cpp ..\Calculator\formula
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QToolBar \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qtoolbar.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QWidget \
+		..\Calculator\logfunctionelement.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QMessageBox \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qmessagebox.h
 
@@ -1254,9 +1263,13 @@ debug\functionelement.obj: ..\Calculator\functionelement.cpp ..\Calculator\funct
 		..\Calculator\viewhelp.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QDialog \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qdialog.h \
+		..\Calculator\graphformula.h \
+		..\Calculator\aboutcalculator.h \
 		..\Calculator\formulaelement.h \
 		..\Calculator\multiplefunctionelement.h \
 		..\Calculator\dividefunctionelement.h \
+		..\Calculator\powerfunctionelement.h \
+		..\Calculator\logfunctionelement.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QMessageBox \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qmessagebox.h
 
@@ -2243,6 +2256,8 @@ debug\additionfunctionelement.obj: ..\Calculator\additionfunctionelement.cpp ..\
 		..\Calculator\viewhelp.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QDialog \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qdialog.h \
+		..\Calculator\graphformula.h \
+		..\Calculator\aboutcalculator.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QMessageBox \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qmessagebox.h
 
@@ -2474,11 +2489,13 @@ debug\viewhelp.obj: ..\Calculator\viewhelp.cpp ..\Calculator\viewhelp.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qinputmethod.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QButtonGroup \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qbuttongroup.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QGroupBox \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qgroupbox.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qframe.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QHeaderView \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qheaderview.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qabstractitemview.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qabstractscrollarea.h \
-		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qframe.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qabstractitemmodel.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qitemselectionmodel.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qabstractitemdelegate.h \
@@ -2492,9 +2509,13 @@ debug\viewhelp.obj: ..\Calculator\viewhelp.cpp ..\Calculator\viewhelp.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qtabbar.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qtabwidget.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qrubberband.h \
-		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QPushButton \
-		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qpushbutton.h \
-		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qabstractbutton.h
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QTextEdit \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qtextedit.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qtextdocument.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qtextoption.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qtextcursor.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qtextformat.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qpen.h
 
 debug\aboutcalculator.obj: ..\Calculator\aboutcalculator.cpp ..\Calculator\aboutcalculator.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QMainWindow \
@@ -2616,11 +2637,13 @@ debug\aboutcalculator.obj: ..\Calculator\aboutcalculator.cpp ..\Calculator\about
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qinputmethod.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QButtonGroup \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qbuttongroup.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QGroupBox \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qgroupbox.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qframe.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QHeaderView \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qheaderview.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qabstractitemview.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qabstractscrollarea.h \
-		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qframe.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qabstractitemmodel.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qitemselectionmodel.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qabstractitemdelegate.h \
@@ -2638,6 +2661,13 @@ debug\aboutcalculator.obj: ..\Calculator\aboutcalculator.cpp ..\Calculator\about
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qmenu.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QStatusBar \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qstatusbar.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QTextEdit \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qtextedit.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qtextdocument.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qtextoption.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qtextcursor.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qtextformat.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qpen.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QWidget
 
 debug\graphformula.obj: ..\Calculator\graphformula.cpp ..\Calculator\graphformula.h \
@@ -2744,7 +2774,57 @@ debug\graphformula.obj: ..\Calculator\graphformula.cpp ..\Calculator\graphformul
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qfiledevice.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qvector2d.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qtouchdevice.h \
-		ui_graphformula.h
+		ui_graphformula.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\QVariant \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QAction \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qaction.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qicon.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qactiongroup.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QApplication \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qapplication.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qcoreapplication.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qeventloop.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qdesktopwidget.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qguiapplication.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qinputmethod.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QButtonGroup \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qbuttongroup.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QDialogButtonBox \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qdialogbuttonbox.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QGraphicsView \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qgraphicsview.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qpainter.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qtextoption.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qpen.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qscrollarea.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qabstractscrollarea.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qframe.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qgraphicsscene.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QHeaderView \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qheaderview.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qabstractitemview.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qabstractitemmodel.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qitemselectionmodel.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qabstractitemdelegate.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qstyleoption.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qabstractspinbox.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qvalidator.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtCore\qregularexpression.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qslider.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qabstractslider.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qstyle.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qtabbar.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qtabwidget.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qrubberband.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QLabel \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qlabel.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QLineEdit \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qlineedit.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qtextcursor.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtGui\qtextformat.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QPushButton \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qpushbutton.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qabstractbutton.h
 
 debug\moc_scientificcalc.obj: debug\moc_scientificcalc.cpp 
 
