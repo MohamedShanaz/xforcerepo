@@ -7,6 +7,7 @@ class CosineFunctionElement : public FunctionElement
 public:
     CosineFunctionElement();
     ~CosineFunctionElement();
+    double evaluate(string);
 };
 
 #endif // COSINEFUNCTIONELEMENT_H

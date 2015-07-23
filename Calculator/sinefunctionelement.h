@@ -7,6 +7,7 @@ class SineFunctionElement : public FunctionElement
 public:
     SineFunctionElement();
     ~SineFunctionElement();
+    double evaluate(string);
 };
 
 #endif // SINEFUNCTIONELEMENT_H
