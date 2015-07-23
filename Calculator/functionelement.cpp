@@ -143,75 +143,69 @@ while (getline( iss, word, '(' ))
 
 }    // End for evaluate;
 
- char FunctionElement::peek()
- {
-     return *expressionToParse;
- }
+char FunctionElement::peek()
+{
+    return *expressionToParse;
+}
 
- char FunctionElement::get()
- {
-     return *expressionToParse++;
- }
+char FunctionElement::get()
+{
+    return *expressionToParse++;
+}
 
- //int expression();
+int expression();
 
- int FunctionElement::number()
- {
-     int result = get() - '0';
-     while (peek() >= '0' && peek() <= '9')
-     {
-         result = 10*result + get() - '0';
-     }
-     return result;
- }
+int FunctionElement::number()
+{
+    int result = get() - '0';
+    while (peek() >= '0' && peek() <= '9')
+    {
+        result = 10*result + get() - '0';
+    }
+    return result;
+}
 
- int FunctionElement::factor()
- {
-     if (peek() >= '0' && peek() <= '9')
-         return number();
-         else if (peek() == '(')
-     {
-         get(); // '('
-         double result = expression();
-         get(); // ')'
-         return result;
-     }
-     else if (peek() == '-')
-     {
-         get();
-         return -expression();
-     }
+int FunctionElement::factor()
+{
+    if (peek() >= '0' && peek() <= '9')
+        return number();
+    else if (peek() == '(')
+    {
+        get(); // '('
+        int result = expression();
+        get(); // ')'
+        return result;
+    }
+    else if (peek() == '-')
+    {
+        get();
+        return -factor();
+    }
+    return 0; // error
+}
 
+int FunctionElement::term()
+{
+    int result = factor();
+    while (peek() == 'X' || peek() == '/')
+        if (get() == 'X')
+            result *= factor();
+        else
+            result /= factor();
+    return result;
+}
 
-     return 0; // error
- }
+int FunctionElement::expression()
+{
+    int result = term();
+    while (peek() == '+' || peek() == '-')
+        if (get() == '+')
+            result += term();
+        else
+            result -= term();
+    return result;
+}
 
-
- int FunctionElement::term()
- {
-     double result = factor();
-     while (peek() == '*' || peek() == '/' || peek() == '^')
-         if (get() == '*')
-             result *= factor();
-         else if (peek() == '/')
-             result /= factor();
-        else if(peek() == '^')
-             result=0;  // added to ^
-      else
-             result /= factor()+1;  // added plus becz it adds to total
-     return result;
- }
- int FunctionElement::expression()
- {
-
-     double result = term();
-     while (peek() == '+' || peek() == '-' || peek()=='^' )
-         if (get() == '+')
-             result += term();
-         else
-             result -= term();
-     return result;
- }
 
 
 

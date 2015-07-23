@@ -218,7 +218,9 @@ void ScientificCalc::on_btnDot_clicked()
 
 void ScientificCalc::on_Xforce_clicked()
 {
-    value = "'X-Force Group'";
+
+      ui->progressBar->setValue(100);
+    value = " ' X-Force Group ' ";
     ui->textEdit->setHtml(value);
 }
 
@@ -262,5 +264,11 @@ void ScientificCalc::on_btnLog_clicked()
 void ScientificCalc::on_btnFactorial_clicked()
 {
     value=value +" !";
+    ui->textEdit->setHtml(value);
+}
+
+void ScientificCalc::on_btnPlusMinus_clicked()
+{
+    value="-" + value;
     ui->textEdit->setHtml(value);
 }
