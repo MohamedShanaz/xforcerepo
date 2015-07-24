@@ -95,6 +95,8 @@ void on_btnSine_clicked();
 
      void on_btnCosine_clicked();
 
+     void on_btnTangent_clicked();
+
 public:
     Ui::ScientificCalc *ui;
     ViewHelp *viewhelp;

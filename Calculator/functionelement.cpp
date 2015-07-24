@@ -146,6 +146,23 @@ while (getline( iss, word, '(' ))
           CosineFunctionElement obj;
           answer=obj.evaluate(input);
       }
+      else{
+          input += " ";
+            istringstream iss( input );
+            string word;
+            int cntr = 0,x;
+            while (getline( iss, word, '(' ))
+              {
+                ++cntr;
+              if(cntr==2){
+                  string y=FunctionElement::trim(word);
+                  y.substr(0, y.size()-1);
+                   istringstream buffer(y);  // convert string to int
+                   buffer >> x;
+              }
+          answer = tan(x*(3.14159/180));
+            }
+      }
   }
  }  // End for While
 

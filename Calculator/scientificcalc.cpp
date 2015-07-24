@@ -286,3 +286,9 @@ void ScientificCalc::on_btnCosine_clicked()
     value=value +"Cos";
     ui->textEdit->setHtml(value);
 }
+
+void ScientificCalc::on_btnTangent_clicked()
+{
+    value=value +"Tan";
+    ui->textEdit->setHtml(value);
+}
