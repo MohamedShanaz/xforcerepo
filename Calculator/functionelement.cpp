@@ -7,6 +7,8 @@
 #include "dividefunctionelement.h"
 #include "powerfunctionelement.h"
 #include "logfunctionelement.h"
+#include "sinefunctionelement.h"
+#include "cosinefunctionelement.h"
 #include <string>
 #include <QMessageBox>
 #include <string>
@@ -133,6 +135,14 @@ while (getline( iss, word, '(' ))
   if(cntr==1){
       if(trim(word)=="Log"){
           LogFunctionElement obj;
+          answer=obj.evaluate(input);
+      }
+      else if(trim(word)=="Sin"){
+          SineFunctionElement obj;
+          answer=obj.evaluate(input);
+      }
+      else if(trim(word)=="Cos"){
+          CosineFunctionElement obj;
           answer=obj.evaluate(input);
       }
   }
