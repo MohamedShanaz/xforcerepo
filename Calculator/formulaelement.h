@@ -37,7 +37,7 @@ public:
     vector<token> parseFormula(string);
     bool is_number(string);
     bool is_varaible(string);
-    void SetAnswer(double);
+    void SetAnswer(double,string);
     string trim(const string&);
 
 };

@@ -37,6 +37,7 @@ double FunctionElement::evaluate(vector<token> tokens,string input){
 
  double answer,answer2;
 int pluscount=0,minuscount=0,multiplecount=0,powercount=0,factorialcount=0,Fvalue;
+
 char sign;
  vector<string> signvector;
 
@@ -71,7 +72,7 @@ char sign;
          signvector.push_back(si);
 
 
- }
+ }  // ENd for for loop
 if(factorialcount>=1 && powercount==0 && pluscount==0 && minuscount==0 && multiplecount==0){
 
     int fact=1;
@@ -146,7 +147,7 @@ while (getline( iss, word, '(' ))
           CosineFunctionElement obj;
           answer=obj.evaluate(input);
       }
-      else{
+      else if (trim(word)=="Cos"){
           input += " ";
             istringstream iss( input );
             string word;

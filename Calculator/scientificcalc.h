@@ -23,7 +23,7 @@ class ScientificCalc : public QMainWindow
 public:
     QString value="",total="";
     string Displaytext,svalue="";
-    int sqr;
+    int sqr=0;
     double anSqrValue;
     explicit ScientificCalc(QWidget *parent = 0);
     ~ScientificCalc();

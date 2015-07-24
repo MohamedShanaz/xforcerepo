@@ -10,6 +10,7 @@
 #include <functional>
 #include <cctype>
 #include <locale>
+#include <stdlib.h>
 
 
 FormulaElement::FormulaElement()
@@ -38,24 +39,32 @@ vector<token>  FormulaElement::parseFormula(string input)
    stringstream parser(input);
    vector<token> output;
    vector<string> vector2;
+   int Idterror=0;
+   string msg="";
+
 
    double answer=0.0; // just testing purpose
    while(parser)
    {
        token t;
             if(isalnum(parser.peek())){
-               parser >> t.f;
+               parser >> t.f; // number
+               if(Idterror==1)Idterror--;
             }else{
-               parser >> t.c;
+               parser >> t.c; // sign
+               Idterror++;
             }
 
             t.number = (t.c==0);
             output.push_back(t);
    }
    output.pop_back();
-
-
-
+   if(Idterror>1){
+       msg="Syntax Error";
+       answer=0.0;
+       SetAnswer(answer,msg);
+   }
+   else{
    for(unsigned int i=0;i<output.size();i++)
    {
       if(output[i].number){
@@ -106,13 +115,18 @@ vector<token>  FormulaElement::parseFormula(string input)
        FunctionElement objFunctionElement;
       answer= objFunctionElement.evaluate(output,input);
 
-    SetAnswer(answer);
+    SetAnswer(answer,msg);
+   }
    return output;
 }
 
-void FormulaElement::SetAnswer(double ans){
+void FormulaElement::SetAnswer(double ans,string err){
    double valueAsDouble = ans;
-   valueAsString = QString::number(valueAsDouble);
+   if(ans!=0.0)
+       valueAsString = QString::number(valueAsDouble);  // Convert double to QString
+   else
+         valueAsString=QString::fromUtf8(err.c_str());  // convert string to QString
+
 }
 
 

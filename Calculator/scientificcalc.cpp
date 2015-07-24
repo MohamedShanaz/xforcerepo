@@ -142,7 +142,7 @@ void ScientificCalc::on_btnSquareroot_clicked()
 {
     value ="√"+value;
     ui->textEdit->setHtml(value);
-    sqr=1;
+    sqr++;
 }
 
 void ScientificCalc::on_btnMinus_clicked()
@@ -167,7 +167,11 @@ void ScientificCalc::on_btnEqual_clicked()
          buffer >> value1;
           anSqrValue=sqrt(value1);  /**/
         value=QString::number(anSqrValue);  // convert double to Qstring
-           ui->textEdit->setHtml(value);
+          if(sqr=1)
+        ui->textEdit->setHtml(value);
+          else
+          ui->textEdit->setHtml("Syntax Error");
+           sqr=2;
    }
 }
 
