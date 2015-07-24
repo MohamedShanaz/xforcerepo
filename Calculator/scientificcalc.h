@@ -87,11 +87,13 @@ private slots:
 
     void on_btnLog_clicked();
 
-
+void on_btnSine_clicked();
 
     void on_btnFactorial_clicked();
 
     void on_btnPlusMinus_clicked();
+
+     void on_btnCosine_clicked();
 
 public:
     Ui::ScientificCalc *ui;
