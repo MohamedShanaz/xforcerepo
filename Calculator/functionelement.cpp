@@ -131,7 +131,8 @@ string  word;
 int cntr = 0;
 while (getline( iss, word, '(' ))
   {
-  cout << "word " << ++cntr << ": " << trim( word ) << '\n';
+  //cout << "word " << ++cntr << ": " << trim( word ) << '\n';
+    ++cntr;
   if(cntr==1){
       if(trim(word)=="Log"){
           LogFunctionElement obj;

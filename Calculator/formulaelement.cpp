@@ -83,7 +83,8 @@ vector<token>  FormulaElement::parseFormula(string input)
      while (getline( iss, word, '(' ))
        {
          FunctionElement obj;
-       cout << "word " << ++cntr << ": " << obj.trim( word ) << '\n';
+    //   cout << "word " << ++cntr << ": " << obj.trim( word ) << '\n';
+         ++cntr;
        if(cntr==1){
            if(obj.trim(word)=="Log"){
                obj.evaluate(output,input);

@@ -20,7 +20,8 @@ double SineFunctionElement::evaluate(string input)
       int           cntr = 0,x;
       while (getline( iss, word, '(' ))
         {
-        cout << "word " << ++cntr << ": " << FunctionElement::trim( word ) << '\n';
+       // cout << "word " << ++cntr << ": " << FunctionElement::trim( word ) << '\n';
+          ++cntr;
         if(cntr==2){
             string y=FunctionElement::trim(word);
             y.substr(0, y.size()-1);
@@ -29,7 +30,7 @@ double SineFunctionElement::evaluate(string input)
         }
 
         }
-      cout<<x<<"\n";
+    //  cout<<x<<"\n";
       //The value should be multiplied by (pi/180) to
       //convert from radian to degrees
     answer = sin(x*(3.14159/180));
