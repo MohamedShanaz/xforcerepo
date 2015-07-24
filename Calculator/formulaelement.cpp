@@ -89,6 +89,16 @@ vector<token>  FormulaElement::parseFormula(string input)
                obj.evaluate(output,input);
            }
        }
+       else if(cntr==1){
+           if(obj.trim(word)=="Sin"){
+               obj.evaluate(output,input);
+           }
+       }
+       else if(cntr==1){
+           if(obj.trim(word)=="Cos"){
+               obj.evaluate(output,input);
+           }
+       }
       }  // End for While
 
 
