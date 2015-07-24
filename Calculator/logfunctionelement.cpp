@@ -29,7 +29,7 @@ double LogFunctionElement::evaluate(string input){
         }
 
         }
-    answer = log (x);
+    answer = log10 (x);
    // cout<<result;
 
   return answer;
