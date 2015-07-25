@@ -147,7 +147,7 @@ while (getline( iss, word, '(' ))
           CosineFunctionElement obj;
           answer=obj.evaluate(input);
       }
-      else if (trim(word)=="Cos"){
+      else if (trim(word)=="Tan"){
           input += " ";
             istringstream iss( input );
             string word;
