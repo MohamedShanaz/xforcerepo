@@ -5,9 +5,9 @@
 class LogFunctionElement : public FunctionElement
 {
 public:
-    LogFunctionElement();
+    LogFunctionElement(); // Constructor for LogFunctionElement
     ~LogFunctionElement();
-     double evaluate(string);
+     double evaluate(string); // Method to Evaluate Mathmatical expression having Log sign
 };
 
 #endif // LOGFUNCTIONELEMENT_H

@@ -5,9 +5,9 @@
 class PowerFunctionElement : public FunctionElement
 {
 public:
-    PowerFunctionElement();
+    PowerFunctionElement(); // Constructor for PowerFunctionElement
     ~PowerFunctionElement();
-     double evaluate(vector<token>);
+     double evaluate(vector<token>); // Method to Evaluate Mathmatical expression having ^ sign
 };
 
 #endif // POWERFUNCTIONELEMENT_H

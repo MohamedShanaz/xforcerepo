@@ -11,7 +11,7 @@
 #include <cctype>
 #include <locale>
 #include <stdlib.h>
-
+#include<math.h>
 
 FormulaElement::FormulaElement()
 {
@@ -43,7 +43,7 @@ vector<token>  FormulaElement::parseFormula(string input)
    string msg="";
 
 
-   double answer=0.0; // just testing purpose
+   double answer=0.0;
    while(parser)
    {
        token t;
@@ -52,6 +52,7 @@ vector<token>  FormulaElement::parseFormula(string input)
                if(Idterror==1)Idterror--;
             }else{
                parser >> t.c; // sign
+               if((t.c != '(' )&& (t.c != ')'))
                Idterror++;
             }
 
@@ -88,7 +89,7 @@ vector<token>  FormulaElement::parseFormula(string input)
    //Second tokenize
      istringstream iss( input );
      string  word;
-     int cntr = 0,x;
+     int cntr = 0;
      while (getline( iss, word, '(' ))
        {
          FunctionElement obj;

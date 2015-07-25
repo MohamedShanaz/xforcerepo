@@ -5,9 +5,9 @@
 class MultipleFunctionElement : public FunctionElement
 {
 public:
-    MultipleFunctionElement();
+    MultipleFunctionElement();  // Constructor for MultipleFunctionElement
     ~MultipleFunctionElement();
-     double evaluate(vector<token>);
+     double evaluate(vector<token>); // Method to Evaluate Mathmatical expression having * sign
 };
 
 #endif // MULTIPLEFUNCTIONELEMENT_H

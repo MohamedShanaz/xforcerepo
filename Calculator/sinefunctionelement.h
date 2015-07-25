@@ -5,9 +5,9 @@
 class SineFunctionElement : public FunctionElement
 {
 public:
-    SineFunctionElement();
+    SineFunctionElement();   // Constructor for SineFunctionElement
     ~SineFunctionElement();
-    double evaluate(string);
+    double evaluate(string);  // Method to Evaluate Mathmatical expression having sin sign
 };
 
 #endif // SINEFUNCTIONELEMENT_H

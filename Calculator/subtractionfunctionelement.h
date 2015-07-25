@@ -5,9 +5,9 @@
 class SubtractionFunctionElement : public FunctionElement
 {
 public:
-    SubtractionFunctionElement();
+    SubtractionFunctionElement();  // Constructor for SubtractionFunctionElement
     ~SubtractionFunctionElement();
-    double evaluate(vector<token>);
+    double evaluate(vector<token>); // Method to Evaluate Mathmatical expression having - sign
 };
 
 #endif // SubtractionFUNCTIONELEMENT_H

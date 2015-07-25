@@ -19,6 +19,7 @@ using std::find;
 using std::string;
 using namespace std;
 
+// Struct used for identifying & storing the tokens
 struct token{
       char c;
       float f;
@@ -31,14 +32,14 @@ struct token{
 class FormulaElement
 {
 public:
-    QString valueAsString;
-    FormulaElement();
+    QString valueAsString;   // TO store the Mathematical Expression temporarily
+    FormulaElement(); // Constructor for FormulaElement
     ~FormulaElement();
-    vector<token> parseFormula(string);
+    vector<token> parseFormula(string);   // Formula Are passed to this Method
     bool is_number(string);
     bool is_varaible(string);
-    void SetAnswer(double,string);
-    string trim(const string&);
+    void SetAnswer(double,string);  // Answer is set to the DispalyTextBox
+    string trim(const string&);    // Used for token the string context
 
 };
 

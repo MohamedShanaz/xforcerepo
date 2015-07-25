@@ -5,9 +5,9 @@
 class CosineFunctionElement : public FunctionElement
 {
 public:
-    CosineFunctionElement();
+    CosineFunctionElement(); //Constructor for CosineFunctionElement
     ~CosineFunctionElement();
-    double evaluate(string);
+    double evaluate(string); // Method to Evaluate Mathmatical expression having Cos sign
 };
 
 #endif // COSINEFUNCTIONELEMENT_H

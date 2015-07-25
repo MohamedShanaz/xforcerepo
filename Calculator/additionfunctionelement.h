@@ -9,9 +9,9 @@
 class AdditionFunctionElement : public FunctionElement
 {
 public:
-    AdditionFunctionElement();
+    AdditionFunctionElement(); // Constructor for AdditionElement
     ~AdditionFunctionElement();
-    double evaluate(vector<token>);
+    double evaluate(vector<token>); // Method to Evaluate Mathmatical expression having + sign
 };
 
 #endif // AdditionFUNCTIONELEMENT_H

@@ -21,7 +21,7 @@ class ScientificCalc : public QMainWindow
     Q_OBJECT
 
 public:
-    QString value="",total="";
+    QString value="",total="";  //
     string Displaytext,svalue="";
     int sqr=0;
     double anSqrValue;

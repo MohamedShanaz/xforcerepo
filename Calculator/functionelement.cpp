@@ -54,7 +54,7 @@ char sign;
          ++minuscount;
          sign=tokens[i].c;
      }
-     if(tokens[i].c == 'X'){
+     if(tokens[i].c == '*'){
          ++multiplecount;
          sign=tokens[i].c;
      }
@@ -107,7 +107,7 @@ else if(pluscount==0 && minuscount>=1 && multiplecount==0 && powercount==0){
 }
 
 else if(pluscount==0 && minuscount==0 && multiplecount>=1 && powercount==0){
-    if(sign == 'X'){
+    if(sign == '*'){
     MultipleFunctionElement objMultipleElement;
     answer =objMultipleElement.evaluate(tokens);
     }
@@ -216,8 +216,8 @@ int FunctionElement::factor()
 int FunctionElement::term()
 {
     int result = factor();
-    while (peek() == 'X' || peek() == '/')
-        if (get() == 'X')
+    while (peek() == '*' || peek() == '/')
+        if (get() == '*')
             result *= factor();
         else
             result /= factor();
@@ -234,9 +234,3 @@ int FunctionElement::expression()
             result -= term();
     return result;
 }
-
-
-
-
-
-
