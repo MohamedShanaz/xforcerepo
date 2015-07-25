@@ -1270,6 +1270,8 @@ debug\functionelement.obj: ..\Calculator\functionelement.cpp ..\Calculator\funct
 		..\Calculator\dividefunctionelement.h \
 		..\Calculator\powerfunctionelement.h \
 		..\Calculator\logfunctionelement.h \
+		..\Calculator\sinefunctionelement.h \
+		..\Calculator\cosinefunctionelement.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QMessageBox \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\qmessagebox.h
 
