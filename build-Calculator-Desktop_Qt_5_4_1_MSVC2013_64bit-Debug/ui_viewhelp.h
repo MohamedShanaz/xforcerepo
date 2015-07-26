@@ -30,7 +30,7 @@ public:
     {
         if (ViewHelp->objectName().isEmpty())
             ViewHelp->setObjectName(QStringLiteral("ViewHelp"));
-        ViewHelp->resize(400, 300);
+        ViewHelp->resize(418, 337);
         groupBox = new QGroupBox(ViewHelp);
         groupBox->setObjectName(QStringLiteral("groupBox"));
         groupBox->setGeometry(QRect(20, 20, 361, 261));
