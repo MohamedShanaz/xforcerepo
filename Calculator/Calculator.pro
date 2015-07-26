@@ -5,6 +5,8 @@
 #-------------------------------------------------
 
 QT       += core gui
+QT       += core gui \
+    printsupport
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -28,7 +30,9 @@ SOURCES += main.cpp\
     subtractionfunctionelement.cpp \
     viewhelp.cpp \
     aboutcalculator.cpp \
-    graphformula.cpp
+    graphformula.cpp \
+    qcustomplot.cpp \
+    newgraph.cpp
 
 HEADERS  += scientificcalc.h \
     formulaelement.h \
@@ -45,9 +49,12 @@ HEADERS  += scientificcalc.h \
     additionfunctionelement.h \
     viewhelp.h \
     aboutcalculator.h \
-    graphformula.h
+    graphformula.h \
+    qcustomplot.h \
+    newgraph.h
 
 FORMS    += scientificcalc.ui \
     viewhelp.ui \
     aboutcalculator.ui \
-    graphformula.ui
+    graphformula.ui \
+    newgraph.ui
