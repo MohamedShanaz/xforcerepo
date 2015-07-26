@@ -52,7 +52,7 @@ vector<token>  FormulaElement::parseFormula(string input)
                if(Idterror==1)Idterror--;
             }else{
                parser >> t.c; // sign
-               if((t.c != '(' )&& (t.c != ')'))
+               if((t.c != '(' )&& (t.c != ')')&&(t.c != '!'))
                Idterror++;
             }
 
