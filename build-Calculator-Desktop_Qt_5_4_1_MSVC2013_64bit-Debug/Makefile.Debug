@@ -8186,6 +8186,11 @@ debug\newgraph.obj: ..\Calculator\newgraph.cpp ..\Calculator\newgraph.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtPrintSupport\qprintpreviewwidget.h \
 		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtPrintSupport\qtprintsupportversion.h \
 		ui_newgraph.h \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QAction \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QApplication \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QButtonGroup \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QHeaderView \
+		C:\Qt\Qt5.4.1\5.4\msvc2013_64\include\QtWidgets\QLabel \
 		..\Calculator\graphformula.h
 
 debug\moc_scientificcalc.obj: debug\moc_scientificcalc.cpp 

@@ -48,7 +48,7 @@ newGraph::~newGraph()
 void newGraph::setupTrigonometricGraph(QCustomPlot *customPlot,int y,double val)
 {
 
-  QMessageBox::information(NULL, "info", QString::number(val));
+ // QMessageBox::information(NULL, "info", QString::number(val));
 
     if(y==1){
         // add two new graphs and set their look:
